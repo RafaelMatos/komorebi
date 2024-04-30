@@ -1,33 +1,83 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
+  @tailwind components;
+  @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+  @layer base {
+    :root {
+      
+      --background: 77 28% 95%;
+      --foreground: 88 25% 10%;
+      
+      --card: 77 28% 95%;
+      --card-foreground: 84 8.2% 11.96%;      
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+      --popover: 77 28% 95%;
+      --popover-foreground: 88 25% 10%;
+
+      --primary: 83 25% 36%;
+      --primary-foreground: 77 28% 95%;
+
+      --secondary: 80 27% 89%;
+      --secondary-foreground: 90 5% 7.84%;
+
+      --muted: 115 19% 88%;
+      --muted-foreground: 83.08 14.29% 64.31%;
+
+      --accent: 83 25% 36%;
+      --accent-foreground: 90 5% 7.84%;
+
+      --destructive: 16 73% 44%;
+      --destructive-foreground: 16 71% 96%;
+
+      --border: 79 27% 80%;
+      --input: 82 24% 44%;
+      --ring: 83 25% 36%;
+
+      --radius: 0.75rem;
+
+      --gradient-komorebi : -webkit-linear-gradient(rgba(107, 206, 225, 0.8), rgba(23,101, 116, 0.8));
+    }
+
+    .dark {
+      --background: 88 25% 10%;
+      --foreground: 77 28% 95%;
+
+      --card: 84 8.2% 11.96%;
+      --card-foreground: 77 28% 95%;
+
+      --popover: 88 25% 10%;
+      --popover-foreground: 77 28% 95%;
+
+      --primary: 83 25% 36%;
+      --primary-foreground: 77 28% 95%;
+
+      --secondary: 90 5% 7.84%;
+      --secondary-foreground: 80 27% 89%;
+
+      --muted: 83.08 14.29% 64.31%;
+      --muted-foreground: 115 19% 88%;
+
+      --accent: 90 5% 7.84%;
+      --accent-foreground:  77 28% 95%;
+
+      --destructive: 16 73% 44%;
+      --destructive-foreground: 16 71% 96%;
+
+      --border: 79 27% 80%;
+      --input: 82 24% 44%;
+      --ring: 83 25% 36%;
+      
+      --radius: 0.75rem;
+      --gradient-komorebi : -webkit-linear-gradient(rgba(107, 206, 225, 0.8), rgba(23,101, 116, 0.8));
+    }
+    
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  @layer base {
+    * {
+      @apply border-border;
+    }
+    body {
+      @apply bg-background text-foreground;
+    }
   }
-}
