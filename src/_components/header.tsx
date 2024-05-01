@@ -9,16 +9,16 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 
 const Header = () => {
   const { setTheme } = useTheme()
-  return ( <header className="flex justify-between w-full bg-primary items-center px-5">
+  return ( <header className="flex justify-between w-full bg-primary items-center px-5 shadow-[rgba(0,0,15,0.5)_10px_5px_4px_0px]">
  <Image
   src='/logo_no_bg.svg'
   alt="Galeria Komorebi"
   height={30}
   width={100}
  />
- <Button size='icon' variant='outline' className="bg-primary hover:bg-secondary-foreground/20 text-primary-foreground" >
+ {/* <Button size='icon' variant='outline' className="bg-primary hover:bg-secondary-foreground/20 text-primary-foreground" >
   <MenuIcon />
- </Button>
+ </Button> */}
   <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="icon">
