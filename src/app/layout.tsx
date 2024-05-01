@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter,Nunito,Cinzel } from "next/font/google";
+import { Nunito } from "next/font/google";
 import "./globals.css";
 import Header from "@/_components/header";
 import { ThemeProvider } from "@/_components/providers/theme-provider";
@@ -20,15 +20,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       
-      <body className={nunito.className}>
+      <body className={`${nunito.className}`}>
       <ThemeProvider
       attribute="class"
       defaultTheme="system"
       enableSystem
       disableTransitionOnChange
       >
-        <Header/>
-        {children}
+        <div className="flex flex-col">
+          <Header/>
+          {children}
+        </div>
+        
         </ThemeProvider>
       </body>
     </html>
