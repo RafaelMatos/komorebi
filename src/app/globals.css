@@ -35,7 +35,6 @@
 
       --radius: 0.75rem;
 
-      --gradient-komorebi : -webkit-linear-gradient(rgba(107, 206, 225, 0.8), rgba(23,101, 116, 0.8));
     }
 
     .dark {
@@ -68,7 +67,6 @@
       --ring: 83 25% 36%;
       
       --radius: 0.75rem;
-      --gradient-komorebi : -webkit-linear-gradient(rgba(107, 206, 225, 0.8), rgba(23,101, 116, 0.8));
     }
     
   }
@@ -78,6 +76,6 @@
       @apply border-border;
     }
     body {
-      @apply bg-background text-foreground;
+      @apply bg-background text-foreground h-full;
     }
   }
