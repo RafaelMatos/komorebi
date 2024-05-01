@@ -1,6 +1,7 @@
 import { Button } from "@/_components/shadcn/ui/button";
 import { ArrowDown } from "lucide-react";
 import { Cinzel } from "next/font/google";
+import Link from "next/link";
 
 const cinzel = Cinzel({ subsets: ["latin"] })
 
@@ -13,10 +14,12 @@ const Hero = () => {
         
       </div>
       <p className="text-2xl">Viva, sinta , seja luz, seja <span className={`font-bold text-[#343d2a] text-4xl ${cinzel.className}`}>Komorebi</span></p>
-      <Button variant='outline' className="text-xl mt-8 group bg-lime-900 gap-4 bg-opacity-10  backdrop-filter backdrop-blur-sm ">
+      <Link href='/#products' >
+      <Button  variant='outline' className="text-xl mt-8 group bg-lime-900 gap-4 bg-opacity-10  backdrop-filter backdrop-blur-sm ">
         Conheça nossos produtos
         <ArrowDown className="animate-pulse group-hover:animate-bounce"/>
       </Button>
+      </Link>
     </div>
    );
 }
